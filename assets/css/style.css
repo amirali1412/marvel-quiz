@@ -59,3 +59,32 @@ body {
     cursor: pointer;
 
 }
+
+.quiz-box .question-number{
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    line-height: 25px;
+}
+.quiz-box .question-text{
+    font-size: 20px;
+    color: white;
+    line-height: 30px;
+    font-weight: 600;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.quiz-box .option-container{}
+.quiz-box .option-container .option{
+    background-color: white;
+    padding: 15px;
+    font-size: 16px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.quiz-box .answers-indicator{}
