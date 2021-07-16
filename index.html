@@ -12,54 +12,36 @@
 <body>
     <h1 class="heading">Marvel Quiz</h1>
 
-    <div class ="home-box custom-box hide">
+    <div class ="home-box custom-box">
         <h2>Are you ready?</h2>
         <p>Total number of questions: <span class="total-question">20</span></p>
-        <button type="button" class="btn">Start Quiz</button>
+        <button id="button" class="btn">Start Quiz</button>
     </div>
 
-    <div class="quiz-box custom-box">
-        <div class="question-number">
-            Question 1 of 20
+    <div class="quiz-box custom-box hidden-content" id="question-holder">
+        <div class="question-number" id="question-number">
         </div>
-        <div class ="question-text">
-            What is Incredible Hulk's real name?
+
+        <div class ="question-text" id="question-text">
         </div>
     
-        <div class="option-container">
-            <div class="option">Bruce Willis</div>
-            <div class="option">Bruce Banner</div>
-            <div class="option">Tony Stark</div>
-            <div class="option">Steve Rodgers</div>
+        <div class="option-container" id="option-container">
+            <button type="button" class="btn answer" id="answer1"></button>
+            <button type="button" class="btn answer" id="answer2"></button>
+            <button type="button" class="btn answer" id="answer3"></button>
+            <button type="button" class="btn answer" id="answer4"></button>
+
         </div>
-        <div class="next-question-btn">
-            <button type="button" class="btn">Next</button>
+
+        <div class="next-question-btn" id="next-question-btn">
+            <button type="button" class="btn" id="next-question">Next</button>
         </div>
+        
         <div class="answers-indicator">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
     </div> 
     
-    <div class="result-box custom-box hide">
+    <div class="result-box custom-box hidden-content">
         <h1>Quiz Result</h1>
         <table style="width:100%">
             <tr>

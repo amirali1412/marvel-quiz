@@ -1,6 +1,6 @@
 /** Array of Objects */
 
-const quiz = [
+let quiz = [
     {
         q:"What is the Incredible Hulk's real name?",
         options:["Bruce Willis","Bruce Banner","Tony Stark","Steve Rodgers"],
@@ -102,3 +102,58 @@ const quiz = [
         answer:1
     },
 ]
+
+let shuffleQuestions = [];
+let questionNumber = 1;
+let questionIndex = 0;
+let startButton = document.getElementById("button");
+startButton.addEventListener('click', startGame);
+document.getElementById("next-question").addEventListener('click', getNextQuestion);
+document.querySelectorAll('.answer')
+      .forEach(button => button.addEventListener('click', validateAnswer));
+
+
+/** Functions for quiz */
+
+function shuffleQuestionsArray(array) {
+    var currentIndex = array.length,  randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+}
+
+function startGame(){
+    document.getElementById('question-holder').classList.remove('hidden-content');
+    shuffleQuestions = shuffleQuestionsArray(quiz);
+    displayQuestion(shuffleQuestions[questionIndex], questionNumber);
+}
+
+function displayQuestion(question, number){
+    document.getElementById('question-text').innerText = question['q'];
+    document.getElementById('question-number').innerText = number;
+    document.getElementById('answer1').innerText = question['options'][0];
+    document.getElementById('answer2').innerText = question['options'][1];
+    document.getElementById('answer3').innerText = question['options'][2];
+    document.getElementById('answer4').innerText = question['options'][3];
+}
+
+function getNextQuestion(){
+    if (questionNumber < shuffleQuestions.length){
+        questionNumber = questionNumber + 1;
+        questionIndex = questionIndex + 1;  
+        displayQuestion(shuffleQuestions[questionIndex], questionNumber);
+    }
+}
+
+
+function validateAnswer(event){
+    console.log('I clicked ', event.target.innerText);
+}
