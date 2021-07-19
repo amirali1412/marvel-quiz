@@ -107,8 +107,10 @@ let shuffleQuestions = [];
 let questionNumber = 1;
 let questionIndex = 0;
 let score = 0;
+let oldScore = 0;
 let startButton = document.getElementById("button");
-let homeBox = document.getElementById("home-box")
+let homeBox = document.getElementById("home-box");
+let questionHolder = document.getElementById("question-holder");
 startButton.addEventListener('click', startGame);
 document.querySelectorAll('.answer')
       .forEach(button => button.addEventListener('click', validateAnswer));
@@ -169,10 +171,28 @@ function validateAnswer(event){
     if (correctAnswerText.localeCompare(selectedAnswerText) === 0){
         score = score + 1;
         console.log('Correct Answer');
+        displayScore ();
     }
     else{
         console.log('Incorrect Answer');
+        displayWrongScore ();
     }
     /**displayScore(score) */
+function displayScore(score){
+    questionHolder.classList.add('hidden-content');
+    document.getElementById("score").
+     
+}
+
+function displayWrongScore(score){
+    document.getElementById("wrong-score").innerText = wrongScore; 
+}
     getNextQuestion();
+}
+
+function finishGame (){
+    questionHolder.classList.add('hidden-content');
+    document.getElementById('result-box').classList.remove('hidden-content');
+
+    }
 }
