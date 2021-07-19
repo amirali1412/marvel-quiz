@@ -106,9 +106,10 @@ let quiz = [
 let shuffleQuestions = [];
 let questionNumber = 1;
 let questionIndex = 0;
+let score = 0;
 let startButton = document.getElementById("button");
+let homeBox = document.getElementById("home-box")
 startButton.addEventListener('click', startGame);
-document.getElementById("next-question").addEventListener('click', getNextQuestion);
 document.querySelectorAll('.answer')
       .forEach(button => button.addEventListener('click', validateAnswer));
 
@@ -131,6 +132,7 @@ function shuffleQuestionsArray(array) {
 }
 
 function startGame(){
+    homeBox.classList.add('hidden-content');
     document.getElementById('question-holder').classList.remove('hidden-content');
     shuffleQuestions = shuffleQuestionsArray(quiz);
     displayQuestion(shuffleQuestions[questionIndex], questionNumber);
@@ -151,9 +153,26 @@ function getNextQuestion(){
         questionIndex = questionIndex + 1;  
         displayQuestion(shuffleQuestions[questionIndex], questionNumber);
     }
+    else {
+        /** finishGame(); */
+    }
 }
 
 
 function validateAnswer(event){
     console.log('I clicked ', event.target.innerText);
+    const selectedAnswerText = event.target.innerText;
+    const currentQuestion = shuffleQuestions[questionIndex];
+    const correctAnswerIndex = currentQuestion.answer;
+    const correctAnswerText = currentQuestion.options[correctAnswerIndex];
+    console.log(selectedAnswerText, correctAnswerText);
+    if (correctAnswerText.localeCompare(selectedAnswerText) === 0){
+        score = score + 1;
+        console.log('Correct Answer');
+    }
+    else{
+        console.log('Incorrect Answer');
+    }
+    /**displayScore(score) */
+    getNextQuestion();
 }
