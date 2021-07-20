@@ -94,12 +94,12 @@ let quiz = [
     {
         q:"What character does Jean Grey evolve into?",
         options:["Blue Robin","Dark Phoenix","Purple Dragon","Black Widow"],
-        answer:2
+        answer:1
     },
     {
         q:"How many weapons does the Human Torch carry on him?",
         options:["1","2","0","3"],
-        answer:1
+        answer:2
     },
 ]
 
@@ -108,6 +108,7 @@ let questionNumber = 1;
 let questionIndex = 0;
 let score = 0;
 let oldScore = 0;
+let incorrectScore = 0;
 let startButton = document.getElementById("button");
 let homeBox = document.getElementById("home-box");
 let questionHolder = document.getElementById("question-holder");
@@ -156,7 +157,7 @@ function getNextQuestion(){
         displayQuestion(shuffleQuestions[questionIndex], questionNumber);
     }
     else {
-        /** finishGame(); */
+        finishGame();
     }
 }
 
@@ -179,13 +180,12 @@ function validateAnswer(event){
     }
     /**displayScore(score) */
 function displayScore(score){
-    questionHolder.classList.add('hidden-content');
-    document.getElementById("score").
+    document.getElementById("score").innerText = score; 
      
 }
 
 function displayWrongScore(score){
-    document.getElementById("wrong-score").innerText = wrongScore; 
+    document.getElementById("incorrect-score").innerText = incorrectScore; 
 }
     getNextQuestion();
 }
@@ -193,6 +193,7 @@ function displayWrongScore(score){
 function finishGame (){
     questionHolder.classList.add('hidden-content');
     document.getElementById('result-box').classList.remove('hidden-content');
-
-    }
-}
+    document.getElementById('total-questions').innerText = 20;
+    document.getElementById('total-correct').innerText = score;
+    document.getElementById('total-incorrect').innerText = incorrectScore;
+ }

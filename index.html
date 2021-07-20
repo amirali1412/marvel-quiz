@@ -38,8 +38,8 @@
     </div> 
 
     <div class="score-area">
-        <p class="scores">Right Answers<span id="score"></span></p>
-        <p class="scores">Wrong Answers<span id="wrong-score"></span></p>
+        <p class="scores">Correct Answers<span id="score"></span></p>
+        <p class="scores">Incorrect Answers<span id="incorrect-score"></span></p>
     </div>
     
     <div class="result-box custom-box hidden-content" id="result-box">
@@ -47,23 +47,15 @@
         <table style="width:100%">
             <tr>
                 <th>Total Questions</th>
-                <td><span class="total-questions">20</span></td>
-            </tr>
-            <tr>
-                <th>Attempted</th>
-                <td><span class="total-attempted">15</span></td>
+                <td><span class="total-questions" id="total-questions">20</span></td>
             </tr>
             <tr>
                 <th>Correct Answers</th>
-                <td><span class="total-correct">12</span></td>
+                <td><span class="total-correct" id="total-correct">12</span></td>
             </tr>
             <tr>
                 <th>Incorrect Answers</th>
-                <td><span class="total-incorrect">3</span></td>
-            </tr>
-            <tr>
-                <th>Total Score</th>
-                <td><span class="total-score">12 / 15</span></td>
+                <td><span class="total-incorrect" id="total-incorrect">3</span></td>
             </tr>
         </table>
         <button type="button" class="btn">Try Again</button>
