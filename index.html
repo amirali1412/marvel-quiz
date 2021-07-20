@@ -35,12 +35,13 @@
 
         <div class="answers-indicator">
         </div>
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <p class="scores incorrect">Incorrect Answers <span id="incorrect-score">0</span></p>
+        </div>
     </div> 
 
-    <div class="score-area">
-        <p class="scores">Correct Answers<span id="score"></span></p>
-        <p class="scores">Incorrect Answers<span id="incorrect-score"></span></p>
-    </div>
+    
     
     <div class="result-box custom-box hidden-content" id="result-box">
         <h1>Quiz Result</h1>
@@ -58,8 +59,7 @@
                 <td><span class="total-incorrect" id="total-incorrect">3</span></td>
             </tr>
         </table>
-        <button type="button" class="btn">Try Again</button>
-        <button type="button" class="btn">Go to Home</button>
+        <button type="button" class="btn" id="try-again">Try Again</button>
     </div>
 
     <script src="assets/js/script.js"></script>

@@ -101,13 +101,62 @@ let quiz = [
         options:["1","2","0","3"],
         answer:2
     },
+    {
+        q:"Who is Juggernaut's half-brother",
+        options:["Cyclops","Professor X","Wolverine","Gambit"],
+        answer:1
+    },
+    {
+        q:"What metal was injected into Wolverine's body?",
+        options:["Copper","Vibranium","Adamantium","Steel"],
+        answer:2
+    },
+    {
+        q:"Which character does Antman team up with?",
+        options:["Wasp","Bee","Spider","Beatle"],
+        answer:0
+    },
+    {
+        q:"What is Silver Surfer's real name?",
+        options:["Victor Von Doom","Ben Grimm","Johnny Storm","Norrin Radd"],
+        answer:3
+    },
+    {
+        q:"What is the name of the race of people that Thanos comes from?",
+        options:["Skrull","Kree","Human","Eternal"],
+        answer:3
+    },
+    {
+        q:"Which of these characters is NOT a memeber of the Guardians of the Galaxy?",
+        options:["Groot","Drax","Star Lord","Ultron"],
+        answer:3
+    },
+    {
+        q:"What is Green Goblin's real name?",
+        options:["William Baker","Norman Osborn","Eric Brooks","Adrian Toomes"],
+        answer:1
+    },
+    {
+        q:"Which city was Bruce Banner born in?",
+        options:["Los Angeles","Miami","Dayton","Houston"],
+        answer:2
+    },
+    {
+        q:"What weapon is Elektra known to use?",
+        options:["Twin Sai","Dagger","Sword","Pistol"],
+        answer:0
+    },
+    {
+        q:"Groot looks most like a .....?",
+        options:["House","Mountain","Cookie","Tree"],
+        answer:3
+    },
 ]
 
 let shuffleQuestions = [];
 let questionNumber = 1;
 let questionIndex = 0;
 let score = 0;
-let oldScore = 0;
 let incorrectScore = 0;
 let startButton = document.getElementById("button");
 let homeBox = document.getElementById("home-box");
@@ -115,7 +164,7 @@ let questionHolder = document.getElementById("question-holder");
 startButton.addEventListener('click', startGame);
 document.querySelectorAll('.answer')
       .forEach(button => button.addEventListener('click', validateAnswer));
-
+document.getElementById('try-again').addEventListener('click', resetGame);
 
 /** Functions for quiz */
 
@@ -141,6 +190,18 @@ function startGame(){
     displayQuestion(shuffleQuestions[questionIndex], questionNumber);
 }
 
+function resetGame(){
+    shuffleQuestions = [];
+    questionNumber = 1;
+    questionIndex = 0;
+    score = 0;
+    incorrectScore = 0;
+    document.getElementById('result-box').classList.add('hidden-content');
+    displayScore();
+    displayIncorrectScore();
+    homeBox.classList.remove('hidden-content');
+}
+
 function displayQuestion(question, number){
     document.getElementById('question-text').innerText = question['q'];
     document.getElementById('question-number').innerText = number;
@@ -151,7 +212,7 @@ function displayQuestion(question, number){
 }
 
 function getNextQuestion(){
-    if (questionNumber < shuffleQuestions.length){
+    if (questionNumber < 20){
         questionNumber = questionNumber + 1;
         questionIndex = questionIndex + 1;  
         displayQuestion(shuffleQuestions[questionIndex], questionNumber);
@@ -161,6 +222,13 @@ function getNextQuestion(){
     }
 }
 
+function displayScore(){
+    document.getElementById("score").innerText = score; 
+}
+
+function displayIncorrectScore(){
+    document.getElementById("incorrect-score").innerText = incorrectScore; 
+}
 
 function validateAnswer(event){
     console.log('I clicked ', event.target.innerText);
@@ -172,21 +240,13 @@ function validateAnswer(event){
     if (correctAnswerText.localeCompare(selectedAnswerText) === 0){
         score = score + 1;
         console.log('Correct Answer');
-        displayScore ();
+        displayScore();
     }
     else{
         console.log('Incorrect Answer');
-        displayWrongScore ();
+        incorrectScore = incorrectScore + 1;
+        displayIncorrectScore();
     }
-    /**displayScore(score) */
-function displayScore(score){
-    document.getElementById("score").innerText = score; 
-     
-}
-
-function displayWrongScore(score){
-    document.getElementById("incorrect-score").innerText = incorrectScore; 
-}
     getNextQuestion();
 }
 
@@ -196,4 +256,4 @@ function finishGame (){
     document.getElementById('total-questions').innerText = 20;
     document.getElementById('total-correct').innerText = score;
     document.getElementById('total-incorrect').innerText = incorrectScore;
- }
+}
