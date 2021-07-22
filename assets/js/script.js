@@ -256,4 +256,17 @@ function finishGame (){
     document.getElementById('total-questions').innerText = 20;
     document.getElementById('total-correct').innerText = score;
     document.getElementById('total-incorrect').innerText = incorrectScore;
+    if (20 <= score <= 16) {
+        document.getElementById('comment').innerText;
+    }
+    else if (15 <= score <= 11) {
+        document.getElementById('comment').innerText;
+    }
+    else if (10 <= score <= 6) {
+        document.getElementById('comment').innerText;
+    }
+    else {
+        document.getElementById('comment').innerText;
+    }
+
 }
