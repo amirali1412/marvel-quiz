@@ -60,7 +60,7 @@ body {
 }
 
 .btn{
-    padding: 20px 40px;
+    padding: 20px 20px;
     background-color: black;
     color: white;
     border: none;
@@ -152,11 +152,20 @@ body {
     font-size: 20px;
 }
 
-.reult-box .btn {
+.result-box .btn {
     margin-right: 20px;
+}
+
+.results {
+    text-align: left;
+    text-transform: uppercase;
 }
 
 
 .hidden-content{
     display: none;
+}
+
+.comment{
+    text-align: left;
 }
