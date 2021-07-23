@@ -102,7 +102,7 @@ let quiz = [
         answer:2
     },
     {
-        q:"Who is Juggernaut's half-brother",
+        q:"Who is Juggernaut's half-brother?",
         options:["Cyclops","Professor X","Wolverine","Gambit"],
         answer:1
     },
@@ -257,18 +257,24 @@ function finishGame (){
     document.getElementById('total-correct').innerText = score;
     document.getElementById('total-incorrect').innerText = incorrectScore;
     if (20 <= score <= 16) {
-        var textToHighlight = "Awesome! Pack your bags Nick Fury is ready to recruit you for S.H.I.E.L.D.";
-        document.getElementById('comment1').innerText;
-        document.getElementById("comment1").innerText = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
+        var textToHighlight = "16-20: Awesome! Pack your bags Nick Fury is ready to recruit you for S.H.I.E.L.D.";
+        var text = document.getElementById('comment1').innerText;
+        document.getElementById("comment1").innerHTML = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
     }
     else if (15 <= score <= 11) {
-        document.getElementById('comment').innerText;
+        var textToHighlight = "11-15: Average.  Not bad but I don't think Tony Stark would be too impressed.";
+        var text = document.getElementById('comment2').innerText;
+        document.getElementById("comment2").innerHTML = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
     }
     else if (10 <= score <= 6) {
-        document.getElementById('comment').innerText;
+        var textToHighlight = "6-10: Below Average.  You need some training, Professor X is headed to your place.";
+        var text = document.getElementById('comment3').innerText;
+        document.getElementById("comment3").innerHTML = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
     }
     else {
-        document.getElementById('comment').innerText;
+        var textToHighlight = "0-5: Poor.  Clear your schedule for marvel research, we're calling Dr Doom to help you.";
+        var text = document.getElementById('comment4').innerText;
+        document.getElementById("comment4").innerHTML = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
     }
 
 }
