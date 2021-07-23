@@ -127,7 +127,7 @@ let quiz = [
         answer:3
     },
     {
-        q:"Which of these characters is NOT a memeber of the Guardians of the Galaxy?",
+        q:"Which of these characters is NOT a member of the Guardians of the Galaxy?",
         options:["Groot","Drax","Star Lord","Ultron"],
         answer:3
     },
@@ -257,7 +257,9 @@ function finishGame (){
     document.getElementById('total-correct').innerText = score;
     document.getElementById('total-incorrect').innerText = incorrectScore;
     if (20 <= score <= 16) {
-        document.getElementById('comment').innerText;
+        var textToHighlight = "Awesome! Pack your bags Nick Fury is ready to recruit you for S.H.I.E.L.D.";
+        document.getElementById('comment1').innerText;
+        document.getElementById("comment1").innerText = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
     }
     else if (15 <= score <= 11) {
         document.getElementById('comment').innerText;
