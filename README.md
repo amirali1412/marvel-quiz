@@ -38,16 +38,16 @@ Marvel Quiz is a game site designed to test the knowledge of those interested in
 
 -Imagery
 
-    I did not use images as it is clear from the heading and favicon as to what the site is about.  Also I did not want to take away the focus from the quiz content.
+    I did not use images as they will give away answers to questions in my quiz.  It is clear from the heading and favicon as to what the site is about.
     
 
 -Wireframes
 
-Start Page Wireframe - View
+Start Page Wireframe - ![Start Page](/assets/images/start.page.jpg)
 
-Questions Page Wireframe - View
+Questions Page Wireframe - ![Questions Page](/assets/images/questions.page.jpg)
 
-Results Page Wireframe - View
+Results Page Wireframe - ![Results Page](/assets/images/results.page.jpg)
 
 <h2>Features</h2>
 
@@ -60,8 +60,10 @@ Results Page Wireframe - View
 Languages used
 
 -HTML5
+
 -CSS3
--jS
+
+-jS ES6
 
 Frameworks, languages and programs used
 
@@ -76,11 +78,13 @@ Frameworks, languages and programs used
 
 <h2>Testing</h2>
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 -W3C Markup Validator
 
 -W3C CSS Validator
+
+-JSHint
 
 Testing User Stories from User Experience (UX) Section
 
@@ -116,9 +120,11 @@ Testing User Stories from User Experience (UX) Section
 
 -Frequent User Goals
 
-    1.As a Frequent User, I want to check to see if there are any new information that was not there before.
+    1.As a Frequent User, I want to check to see if there is any new information that was not there before.
 
         a.The randomization of questions means that the quiz is slightly different every time the user plays.
+
+        b.The questions are updated over time to ensure the user gets a slightly different experience every time they play the game.
 
 Further Testing
 
@@ -132,6 +138,69 @@ Further Testing
 
 <h2>Deployment</h2>
 
+GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+    1.Log in to GitHub and locate the GitHub Repository
+
+    2.At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+
+    3.Scroll down the Settings page until you locate the "GitHub Pages" Section.
+
+    4.Under "Source", click the dropdown called "None" and select "Master Branch".
+
+    5.The page will automatically refresh.
+
+    6.Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+    1.Log in to GitHub and locate the GitHub Repository.
+
+    2.At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+
+    3.You should now have a copy of the original repository in your GitHub account.
+
 <h2>Making a Local Clone</h2>
 
+1.Log in to GitHub and locate the GitHub Repository.
+
+    2.Under the repository name, click "Clone or download".
+
+    3.To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+
+    4.Open Git Bash.
+
+    5.Change the current working directory to the location where you want the cloned directory to be made.
+
+    6.Type git clone, and then paste the URL you copied in Step 3.
+
+    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+    7.Press Enter. Your local clone will be created.
+
+    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+    
+    > Cloning into `CI-Clone`...
+    > remote: Counting objects: 10, done.
+    > remote: Compressing objects: 100% (8/8), done.
+    > remove: Total 10 (delta 1), reused 10 (delta 1)
+    > Unpacking objects: 100% (10/10), done.
+
 <h2>Credits</h2>
+
+-Content 
+
+-All content was written by the developer.
+
+-Media 
+
+-The favicon was taken from google search.
+
+-Acknowledgements
+
+-My Mentor for continuous helpful feedback.
+
+-Thanks also to tutor support at Code Institute for their support.

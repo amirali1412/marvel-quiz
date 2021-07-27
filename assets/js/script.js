@@ -256,25 +256,28 @@ function finishGame (){
     document.getElementById('total-questions').innerText = 20;
     document.getElementById('total-correct').innerText = score;
     document.getElementById('total-incorrect').innerText = incorrectScore;
-    if (20 <= score <= 16) {
-        var textToHighlight = "16-20: Awesome! Pack your bags Nick Fury is ready to recruit you for S.H.I.E.L.D.";
-        var text = document.getElementById('comment1').innerText;
-        document.getElementById("comment1").innerHTML = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
+    document.getElementById("comment1").innerHTML = '16-20: Awesome! Pack your bags Nick Fury is ready to recruit you for S.H.I.E.L.D.';
+    document.getElementById("comment2").innerHTML = '11-15: Average.  Not bad but I dont think Tony Stark would be too impressed.';
+    document.getElementById("comment3").innerHTML = '6-10: Below Average.  You need some training, Professor X is headed to your place.';
+    document.getElementById("comment4").innerHTML = '0-5: Poor.  Clear your schedule for marvel research, were calling Dr Doom to help you.';
+    if (score >= 16) {
+        console.log('16-20');
+        var textToHighlight = '<span style="color:white"> 16-20: Awesome! Pack your bags Nick Fury is ready to recruit you for S.H.I.E.L.D.</span>';
+        document.getElementById("comment1").innerHTML = textToHighlight;
     }
-    else if (15 <= score <= 11) {
-        var textToHighlight = "11-15: Average.  Not bad but I don't think Tony Stark would be too impressed.";
-        var text = document.getElementById('comment2').innerText;
-        document.getElementById("comment2").innerHTML = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
+    else if (score >= 11) {
+        console.log('15-11');
+        var textToHighlight = '<span style="color:white"> 11-15: Average.  Not bad but I dont think Tony Stark would be too impressed. </span>';
+        document.getElementById("comment2").innerHTML = textToHighlight;
     }
-    else if (10 <= score <= 6) {
-        var textToHighlight = "6-10: Below Average.  You need some training, Professor X is headed to your place.";
-        var text = document.getElementById('comment3').innerText;
-        document.getElementById("comment3").innerHTML = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
+    else if (score >= 6) {
+        console.log('6-10');
+        var textToHighlight = '<span style="color:white"> 6-10: Below Average.  You need some training, Professor X is headed to your place. </span>';
+        document.getElementById("comment3").innerHTML = textToHighlight;
     }
     else {
-        var textToHighlight = "0-5: Poor.  Clear your schedule for marvel research, we're calling Dr Doom to help you.";
-        var text = document.getElementById('comment4').innerText;
-        document.getElementById("comment4").innerHTML = text.replace(textToHighlight, '<span style="color:white">'+textToHighlight+'</span>');
+        console.log('0-5');
+        var textToHighlight = '<span style="color:white"> 0-5: Poor.  Clear your schedule for marvel research, were calling Dr Doom to help you. </span>';
+        document.getElementById("comment4").innerHTML = textToHighlight;
     }
-
 }
