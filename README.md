@@ -1,102 +1,137 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1>Marvel Quiz</h1>
 
-Welcome amirali1412,
+Marvel Quiz is a game site designed to test the knowledge of those interested in all things Marvel.  As Marvel has become really popular in recent times it seemed appropriate that a quiz would be something a lot of people would be interested in.  My quiz is not just based on the avengers, which a lot of the movies are geared towards.  I have tried to cover other groups who also are a part of Marvel such as the X-men and the Fantastic Four.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+<h2>User Experience (UX)</h2>
 
-## Gitpod Reminders
+-User Stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+-First Time Visitor Goals
 
-`python3 -m http.server`
+    1.As a First Time Visitor, I want to easily understand the main purpose of the site.
+    
+    2.As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+    
+    3.As a First Time Visitor, I want to see if this site is applicable to me. 
 
-A blue button should appear to click: _Make Public_,
+-Returning Visitor Goals
 
-Another blue button should appear to click: _Open Browser_.
+    1.As a Returning Visitor, I want to retest their knowledge.
+    
+    2.As a Returning Visitor, I want to strive to achieve the best comment/highest rating.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+-Frequent User Goals
 
-A blue button should appear to click: _Make Public_,
+    1.As a Frequent User, I want to check to see if there are any new quesitons that were not there before.
+    
+    2.As a Frequent User, I want to see if I can rememeber all the correct answers.
 
-Another blue button should appear to click: _Open Browser_.
+-Design
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+-Colour Scheme
 
-To log into the Heroku toolbelt CLI:
+    The three main colours used are black, red, and white.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+-Typography
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+    The Scada font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Scada is a clean font used frequently in programming.  It also looks a bit more futuristic to fit my marvel theme.
 
-------
+-Imagery
 
-## Release History
+    I did not use images as it is clear from the heading and favicon as to what the site is about.  Also I did not want to take away the focus from the quiz content.
+    
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+-Wireframes
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Start Page Wireframe - View
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+Questions Page Wireframe - View
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Results Page Wireframe - View
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<h2>Features</h2>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+-Responsive on all device sizes
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+-Interactive elements
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<h2>Technologies Used</h2>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Languages used
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+-HTML5
+-CSS3
+-jS
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Frameworks, languages and programs used
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+1.Google Fonts:
+    -Google Fonts were used to import the 'scada' font into the style.css file which was used throughout the project on all pages.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+2.Git:
+    -Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
-------
+3.Github
+    -GitHub is used to store the projects code after being pushed from Git.
 
-## FAQ about the uptime script
+<h2>Testing</h2>
 
-**Why have you added this script?**
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+-W3C Markup Validator
 
-**How will this affect me?**
+-W3C CSS Validator
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Testing User Stories from User Experience (UX) Section
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+-First Time Visitor Goals
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+    1.As a First Time Visitor, I want to easily understand the main purpose of the site.
 
-**So….?**
+        a.Upon entering the site, users automatically see the heading which clearly states what the site is about.
+        
+        b.There is a question below the heading to engage the user.
+        
+        c.Instructions make it clear how to play the game.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    2.As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
 
-**Can I opt out?**
+        a.The site has been designed to be make it easy for anyone of any age group to use, provided they are able to read.
+        
+        b.At the end of the quiz the user can select the try again button to see if they can beat their previous score.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+    3.As a First Time Visitor, I want to see if this site is applicable to me.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+        a.Once the new visitor has read the title it will be clear if the site is applicable to them.
+        
+        b.The site contains the 3 colors of the marvel logo to subconsciously give the user the feel of Marvel and thus enhance a Marvel experience.
+        
+-Returning Visitor Goals
 
-**Anything more?**
+    1.As a Returning Visitor, I want to achieve a better comment on the results page.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+        a.There are 20 questions in the quiz, however there are a total of 30 questions that these 20 questions are selceted from.
 
----
+        b.After watching more Marvel movies they will achieve a better score as their knowledge of Marvel would have increased.
 
-Happy coding!
+-Frequent User Goals
+
+    1.As a Frequent User, I want to check to see if there are any new information that was not there before.
+
+        a.The randomization of questions means that the quiz is slightly different every time the user plays.
+
+Further Testing
+
+    1.The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+
+    2.The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+
+    3.A large amount of testing was done to ensure that all pages were linking correctly.
+
+    4.Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+<h2>Deployment</h2>
+
+<h2>Making a Local Clone</h2>
+
+<h2>Credits</h2>

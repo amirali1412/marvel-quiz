@@ -6,7 +6,6 @@ body {
     font-family: 'Scada', sans-serif;
     font-weight: 600;
     background-color: black;
-    font: white;
 }
 
 *{
@@ -14,6 +13,12 @@ body {
     margin: 0;
     padding: 0;
     outline: none;
+}
+
+.heading {
+    font-size: 50px;
+    color: white;
+    text-align: center;
 }
 
 .custom-box {
@@ -176,6 +181,7 @@ body {
 }
 
 .comment{
+    font-size: 18px;
     text-align: left;
     padding: 5px;
 }
