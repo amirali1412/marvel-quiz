@@ -84,7 +84,7 @@ The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to val
 
 -W3C CSS Validator
 
--JSHint
+-JSHint javaSrcipt Validator
 
 Testing User Stories from User Experience (UX) Section
 
