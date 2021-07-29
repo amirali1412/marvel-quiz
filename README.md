@@ -30,7 +30,7 @@ Marvel Quiz is a game site designed to test the knowledge of those interested in
 
 -Colour Scheme
 
-    The three main colours used are black, red, and white.
+    The three main colours used are black, red, and white.  The reason I wanted to use these colors is because these are the colours that I thought identify best with Marvel.
 
 -Typography
 
